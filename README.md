@@ -8,8 +8,8 @@ Ele permite o controle e acompanhamento de carteiras de investimento, incluindo 
 
 CLASSE: Portfolio 
 
-        |--> Representa uma carteira de investimentos de um usuario. Será responsável para guardar ativos comprados, calcular o valor total investido
-        e exibir os ativos da carteira.
+|--> Representa uma carteira de investimentos de um usuario. Será responsável para guardar ativos comprados, calcular o valor total investido
+e exibir os ativos da carteira.
 
 OBEJTO: user_portfolio.
 
