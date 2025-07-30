@@ -13,12 +13,12 @@ e exibir os ativos da carteira.
 
 OBEJTO: user_portfolio.
 
-        |--> Representa uma carteira de investimento individual. 
+|--> Representa uma carteira de investimento individual. 
 
 ATRIBUTO DE OBJETO
 
-       ATIVOS (do tipo list) > Lista que armazena todos os ativos adicionados à carteira. Cada ativo é um dicionário contendo nome, quantidade e preço.
-       SALDO (do tipo float) > 	Representa o saldo disponível do usuário (pode ser usado futuramente). Inicialmente é 0.0.
+ATIVOS (do tipo list) > Lista que armazena todos os ativos adicionados à carteira. Cada ativo é um dicionário contendo nome, quantidade e preço.
+SALDO (do tipo float) > Representa o saldo disponível do usuário (pode ser usado futuramente). Inicialmente é 0.0.
 
 AÇÕES DO OBJETO
 
