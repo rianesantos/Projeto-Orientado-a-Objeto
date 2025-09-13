@@ -20,14 +20,14 @@ function CreateStrategy() {
     const newStrategyData = {
       name,
       description,
-      is_active: false, // Nova estratégia começa inativa
+      is_active: false, // New strategy starts inactive
     };
 
     try {
-      // Faz a requisição POST para a API com os dados do formulário
+      // Makes a POST request to the API with the form data
       await api.post("/strategies/", newStrategyData);
       
-      // Redireciona o usuário para a página de estratégias após a criação
+      // Redirects user to strategies page after creation
       navigate("/strategies", { state: { message: "Strategy created successfully!" } });
     } catch (err) {
       console.error("Error creating strategy:", err.response?.data?.detail || err.message);
