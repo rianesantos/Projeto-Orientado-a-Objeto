@@ -6,12 +6,12 @@ export default function PageWrapper({ children, user }) {
 
   return (
     <div className="flex h-screen bg-gray-900 text-white">
-      {/* Sidebar para desktop */}
+      {/* Desktop sidebar */}
       <div className="hidden lg:flex">
         <Sidebar />
       </div>
 
-      {/* Overlay para mobile */}
+      {/* Overlay for mobile */}
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-gray-900 bg-opacity-50 z-20 lg:hidden"
@@ -19,7 +19,6 @@ export default function PageWrapper({ children, user }) {
         ></div>
       )}
 
-      {/* Sidebar mobile */}
       <div
         className={`fixed inset-y-0 left-0 z-30 w-64 bg-gray-900 transform transition duration-300 ease-in-out lg:hidden ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
@@ -28,7 +27,7 @@ export default function PageWrapper({ children, user }) {
         <Sidebar onClose={() => setSidebarOpen(false)} />
       </div>
 
-      {/* Conteúdo principal */}
+      {/* Main contentl */}
       <main className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
         <header className="bg-gray-800 border-b border-gray-700 py-4 px-6 flex items-center justify-between">
@@ -56,7 +55,7 @@ export default function PageWrapper({ children, user }) {
             </h1>
           </div>
 
-          {/* Ações no header */}
+          {/* Actions in the header */}
           <div className="flex items-center space-x-4">
             <button className="p-2 text-gray-400 hover:text-gray-200 focus:outline-none">
               <svg
@@ -102,7 +101,7 @@ export default function PageWrapper({ children, user }) {
           </div>
         </header>
 
-        {/* Conteúdo */}
+        {/* Content */}
         <div className="flex-1 overflow-y-auto p-6 bg-gray-900">
           {children}
         </div>
