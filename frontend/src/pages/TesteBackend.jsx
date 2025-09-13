@@ -5,7 +5,7 @@ function TesteBackend() {
   const [msg, setMsg] = useState("Conectando...");
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/ping") // use 127.0.0.1 em vez de localhost
+    axios.get("http://127.0.0.1:8000/ping") 
       .then(res => setMsg(res.data.message))
       .catch(err => {
         console.error("Erro ao conectar com o backend:", err);
