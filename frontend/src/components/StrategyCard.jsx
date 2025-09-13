@@ -13,7 +13,7 @@ function StrategyCard({ strategy, onStrategyUpdate, onStrategyDelete }) {
     if (window.confirm("Are you sure you want to delete this strategy?")) {
       try {
         await api.delete(`/strategies/${strategy.id}`);
-        // Chama a função de callback para atualizar a lista de estratégias
+        // Call the callback function to update the list of strategies
         onStrategyDelete(strategy.id); 
       } catch (error) {
         console.error("Failed to delete strategy:", error);
