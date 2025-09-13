@@ -1,0 +1,53 @@
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: #333;
+}
+
+.data-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.data-card p {
+  margin: 10px 0;
+}
+
+.price-tag {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.alert-box {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.last-update {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 15px;
+}
