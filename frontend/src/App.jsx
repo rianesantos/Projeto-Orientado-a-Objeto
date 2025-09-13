@@ -15,7 +15,7 @@ function App() {
   const { isAuthenticated, loading } = useAuth();
 
   if (loading) {
-    // Exibe um spinner de carregamento enquanto o estado de autenticação é verificado
+    // Displays a loading spinner while the authentication state is checked
     return <div>Loading...</div>;
   }
 
