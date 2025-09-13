@@ -1,14 +1,14 @@
 import { useState } from "react";
 import api from "../services/api";
 import { useNavigate, Link } from "react-router-dom"; 
-import { useAuth } from "../context/AuthContext"; // usamos o contexto
+import { useAuth } from "../context/AuthContext"; 
 
 function Login() {
   const [form, setForm] = useState({ username: "", password: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const { login } = useAuth(); // função login do contexto
+  const { login } = useAuth(); 
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -24,10 +24,8 @@ function Login() {
       const response = await api.post("auth/token", new URLSearchParams(form));
       const token = response.data.access_token;
       
-      // salva o token no contexto e no localStorage
       login(token);
 
-      // redireciona para o dashboard
       navigate("/dashboard");
     } catch (error) {
       console.error("Login error:", error);
