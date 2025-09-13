@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Home, BarChart, Bell, Settings, LogOut, Briefcase } from "lucide-react"; // Importe o ícone do portfólio
+import { Home, BarChart, Bell, Settings, LogOut, Briefcase } from "lucide-react"; 
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
@@ -11,7 +11,7 @@ export default function Sidebar() {
         isOpen ? "w-64" : "w-16"
       }`}
     >
-      {/* Botão toggle */}
+      {/* toggle button */}
       <button
         className="text-gray-400 hover:text-white mb-6"
         onClick={() => setIsOpen(!isOpen)}
