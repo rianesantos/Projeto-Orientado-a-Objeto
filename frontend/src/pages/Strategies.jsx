@@ -29,7 +29,7 @@ function Strategies() {
     fetchStrategies();
   }, []);
 
-  // Esta função agora apenas redireciona para a página de criação
+  // This function now just redirects to the creation page
   const handleCreateNewStrategy = () => {
     navigate("/strategies/new"); 
   };
