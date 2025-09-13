@@ -10,7 +10,7 @@ function Layout({ children }) {
       {/* Sidebar */}
       <Sidebar isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
 
-      {/* Conteúdo principal */}
+      {/* Main content */}
       <div className={`flex flex-col flex-1 transition-all duration-300 ${isCollapsed ? "ml-20" : "ml-64"}`}>
         <Navbar />
         <main className="p-6 overflow-y-auto">{children}</main>
