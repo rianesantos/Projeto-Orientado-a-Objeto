@@ -2,7 +2,6 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 from ..database import get_db
-# CORRIGIDO: Importar models diretamente
 from backend.models import Account, Position, Order, OrderStatus, Side
 from .. import schemas
 
@@ -10,24 +9,24 @@ router = APIRouter(prefix="/orders", tags=["orders"])
 
 @router.post("/", response_model=schemas.OrderOut)
 def create_order(payload: schemas.OrderCreate, db: Session = Depends(get_db)):
-    account = db.get(Account, payload.account_id)  # Usar Account diretamente
-    if not account:
+    account = db.get(Account, payload.account_id)  
+    if not account
         raise HTTPException(status_code=404, detail="Account not found")
     
-    if payload.side == Side.sell:  # Usar Side diretamente
-        pos = db.query(Position).filter_by(  # Usar Position diretamente
+    if payload.side == Side.sell:  
+        pos = db.query(Position).filter_by(  
             account_id=payload.account_id, 
             symbol=payload.symbol
         ).first()
         if not pos or pos.quantity < payload.quantity:
             raise HTTPException(status_code=400, detail="Insufficient position to sell")
     
-    order = Order(  # Usar Order diretamente
+    order = Order(  
         account_id=payload.account_id,
         symbol=payload.symbol,
         side=payload.side,
         quantity=payload.quantity,
-        status=OrderStatus.open  # Usar OrderStatus diretamente
+        status=OrderStatus.open  
     )
     
     db.add(order)
