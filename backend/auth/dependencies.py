@@ -5,7 +5,8 @@ from sqlalchemy.orm import Session
 from backend.database import get_db
 from backend.models import User
 
-SECRET_KEY = "0b762d508bfb094f282974982fe089ee1ce2059e0f7d0fd3680c1b2cc47ab836"
+# Use the same secret key as your JWT file
+SECRET_KEY = "sua-chave-secreta"
 ALGORITHM = "HS256"
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
