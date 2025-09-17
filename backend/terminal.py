@@ -162,7 +162,7 @@ def create_strategy(headers):
 @auth_required
 def edit_strategy(headers):
     list_strategies(headers)
-    if not AUTH_TOKEN:  # Se list_strategies falhou por auth, não continuar
+    if not AUTH_TOKEN:  
         return
     strategy_id = Prompt.ask("Enter the ID of the strategy to edit")
     name = Prompt.ask("Enter new name (blank to skip)")
@@ -179,7 +179,7 @@ def edit_strategy(headers):
 @auth_required
 def delete_strategy(headers):
     list_strategies(headers)
-    if not AUTH_TOKEN:  # Se list_strategies falhou por auth, não continuar
+    if not AUTH_TOKEN:  
         return
     strategy_id = Prompt.ask("Enter the ID of the strategy to delete")
     if Confirm.ask("Are you sure you want to delete this strategy?"):
